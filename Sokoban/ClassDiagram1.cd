@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Sokoban.Models.Crate">
+    <Position X="9" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Crate.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Coordinate" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sokoban.Models.Destination">
+    <Position X="1" Y="4" Width="1.5" />
+    <InheritanceLine Type="Sokoban.Models.Floor" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="2" Y="2.935" />
+        <Point X="2" Y="3.247" />
+        <Point X="1.75" Y="3.247" />
+        <Point X="1.75" Y="4" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Destination.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.Models.Field">
+    <Position X="3.25" Y="6.25" Width="1.5" />
+    <AssociationLine Name="CanWalkOn" Type="System.Boolean">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.007" Y="-0.263" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAABAAAAEAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Models\Field.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="CanWalkOn" />
+      <Property Name="Type" />
+      <Property Name="Coordinate" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sokoban.Models.Floor">
+    <Position X="1.75" Y="1.5" Width="1.5" />
+    <InheritanceLine Type="Sokoban.Models.Field" FixedToPoint="true">
+      <Path>
+        <Point X="4" Y="6.25" />
+        <Point X="4" Y="3.31" />
+        <Point X="3.188" Y="3.31" />
+        <Point X="3.188" Y="2.935" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="HasCrate" Type="System.Boolean">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.95" Y="-0.217" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="HasForklift" Type="System.Boolean">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.235" Y="0.11" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Models\Floor.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HasCrate" />
+      <Property Name="HasForklift" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sokoban.Models.Forklift">
+    <Position X="10.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Forklift.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Coordinate" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sokoban.Models.Game">
+    <Position X="13.75" Y="3.25" Width="1.5" />
+    <AssociationLine Name="Crates" Type="System.Collections.Generic.List&lt;T&gt;" ManuallyRouted="true">
+      <Path>
+        <Point X="15.25" Y="4.469" />
+        <Point X="16.622" Y="4.469" />
+        <Point X="16.622" Y="3.952" />
+        <Point X="17.228" Y="3.952" Type="JumpStart" />
+        <Point X="17.394" Y="3.952" Type="JumpEnd" />
+        <Point X="19.406" Y="3.952" />
+        <Point X="19.406" Y="2.562" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="IsPlaying" Type="System.Boolean" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14.375" Y="3.25" />
+        <Point X="14.375" Y="1.75" />
+        <Point X="6.75" Y="1.75" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.136" Y="-0.255" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ABAACAAAAAAIABABAAAgAAIAAAQAAgAAAAAAAAIABEA=</HashCode>
+      <FileName>Models\Game.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="Maze" />
+      <Field Name="Forklift" />
+      <Field Name="Crates" />
+      <Property Name="IsPlaying" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sokoban.Models.Location" Collapsed="true">
+    <Position X="10.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
+      <FileName>Models\Location.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.Models.Maze">
+    <Position X="19.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Models\Maze.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="Map" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sokoban.Models.Space">
+    <Position X="7" Y="3" Width="1.5" />
+    <InheritanceLine Type="Sokoban.Models.Field" FixedFromPoint="true">
+      <Path>
+        <Point X="4.75" Y="6.562" />
+        <Point X="5.125" Y="6.562" />
+        <Point X="5.125" Y="3.713" />
+        <Point X="7" Y="3.713" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Space.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.Models.Wall">
+    <Position X="5.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Wall.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.Controllers.GameController">
+    <Position X="16.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAABAAAAAAAAAAgAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Controllers\GameController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="Game" />
+      <Field Name="WantsToPlay" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sokoban.Views.LevelView" BaseTypeListCollapsed="true">
+    <Position X="20.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\LevelView.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sokoban.Views.ResultView" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\ResultView.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Sokoban.Views.StartView" BaseTypeListCollapsed="true">
+    <Position X="16.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\StartView.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="System.Collections.Generic.List&lt;T&gt;" Collapsed="true">
+    <Position X="18.5" Y="2" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Collections.Generic.Dictionary&lt;TKey, TValue&gt;" Collapsed="true">
+    <Position X="17.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Struct Name="System.Boolean" Collapsed="true">
+    <Position X="5.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Struct>
+  <Interface Name="Sokoban.Views.IViewInterface">
+    <Position X="6.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\ViewInterface.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Sokoban.Enums.DirectionType">
+    <Position X="20.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAI=</HashCode>
+      <FileName>Enums\DirectionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Sokoban.Enums.FieldType">
+    <Position X="7.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACEAAAAAAAgAAAAAAAAAAAIAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Enums\FieldType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
